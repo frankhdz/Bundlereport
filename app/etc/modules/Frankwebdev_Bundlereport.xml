@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Frankwebdev_Bundlereport>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Frankwebdev_Bundlereport>
+    </modules>
+</config>

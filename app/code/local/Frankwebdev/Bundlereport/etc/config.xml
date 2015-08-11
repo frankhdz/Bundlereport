@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   Bubbleup
+ * @package    Frankwebdev_Bundlereport
+ * @author     Damian Alberto Pastorini
+ */
+ -->
+<config>
+    <modules>
+        <Frankwebdev_Bundlereport>
+            <version>0.1.0</version>
+        </Frankwebdev_Bundlereport>
+    </modules>
+    <admin>
+        <routers>
+            <bundlereport>
+                <use>admin</use>
+                <args>
+                    <module>Frankwebdev_Bundlereport</module>
+                    <frontName>bundlereport</frontName>
+                </args>
+            </bundlereport>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <report>
+                <children>
+                    <bundlereport translate="title" module="bundlereport">
+                        <title>Bundle Report</title>
+                        <action>bundlereport/adminhtml_bundlereport</action>
+                        
+                    </bundlereport>
+                </children>
+            </report>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <report>
+                            <children>
+                                <bundlereport translate="title" module="bundlereport">
+                                    <title>Bundle Report</title>
+                                    <action>bundlereport/adminhtml_bundlereport</action>
+                                </bundlereport>
+                            </children>
+                        </report>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <bundlereport>
+                    <file>bundlereport.xml</file>
+                </bundlereport>
+            </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <models>
+            <bundlereport>
+                <class>Frankwebdev_Bundlereport_Model</class>
+                <resourceModel>bundlereport</resourceModel>
+            </bundlereport>
+        </models>
+        <resources>
+            <bundlereport_setup>
+                <setup>
+                    <module>Frankwebdev_Bundlereport</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </bundlereport_setup>
+            <bundlereport_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </bundlereport_write>
+            <bundlereport_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </bundlereport_read>
+        </resources>
+        <blocks>
+            <bundlereport>
+                <class>Frankwebdev_Bundlereport_Block</class>
+            </bundlereport>
+        </blocks>
+        <helpers>
+            <bundlereport>
+                <class>Frankwebdev_Bundlereport_Helper</class>
+            </bundlereport>
+        </helpers>
+    </global>
+</config> 

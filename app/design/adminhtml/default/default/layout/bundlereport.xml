@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <bundlereport_adminhtml_bundlereport_index>
+        <reference name="content">
+          <!--  <block type="bundlereport/adminhtml_bundlereport"  name="bundlereport" />  -->
+            <block type="bundlereport/adminhtml_bundlereport" template="bundlereport/grid/container.phtml" name="bundlereport">
+
+
+            	 <block type="bundlereport/adminhtml_bundlereport_grid" template="bundlereport/grid.phtml" name="grid.bundlefilter.form"/>
+                <remove name="grid.filter.form"/>
+
+
+            </block>
+          
+
+
+        </reference>
+    </bundlereport_adminhtml_bundlereport_index>
+</layout>
